@@ -1,0 +1,15 @@
+{
+  "name": "webportfolio",
+  "version": "1.0.0",
+  "description": "This is my web portfolio",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "author": "Matt Sullivan",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.17.1"
+  }
+}

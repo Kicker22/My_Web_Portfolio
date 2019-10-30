@@ -1,0 +1,80 @@
+
+.banner{
+    /* min-height:100%; */
+    background:linear-gradient(0deg,rgba(0, 0, 0, 0.3),rgba(0, 0, 0, 0.3)),url(../../assets/images/mountains-3840x2160-008.jpg);
+    background-size:cover;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+}
+
+@media only screen and (max-width: 600px){
+    .banner{
+        /* min-height:50%; */
+        background:linear-gradient(0deg,rgba(0, 0, 0, 0.3),rgba(0, 0, 0, 0.3)),url(../../assets/images/mountains-3840x2160-008.jpg);
+        background-size:cover;
+        background-position:center;
+        background-attachment: fixed;
+        background-repeat: no-repeat;
+    }
+}
+@media only screen and (max-width: 1000px){
+    .banner{
+        /* min-height:50%; */
+        background:linear-gradient(0deg,rgba(0, 0, 0, 0.3),rgba(0, 0, 0, 0.3)),url(../../assets/images/mountains-3840x2160-008.jpg);
+        background-size:contain;
+        background-position:center;
+        background-attachment: fixed;
+        background-repeat: no-repeat;
+    }
+}
+
+
+
+.overlay{
+    /* background: black; */
+}
+.jumbo-content{
+ margin-top: 10rem;
+ margin-bottom: 10rem;
+}
+.navbar{
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.nav-links{
+   padding:1rem;
+    /* background:red; */
+}
+.nav-links:hover{
+   padding:1rem;
+    background:red;
+}
+
+.profImg{
+   margin: 0;
+   padding: 0;
+   
+   
+}
+
+.img{
+    border-radius: 200px;
+    margin-bottom: 2rem;
+    height: 200px;
+    background-image: url(../../assets/images/enguagment.jpg);
+    /* background-position: top; */
+    background-size: cover;
+    background-repeat: no-repeat;
+
+}
+
+.about{
+    margin-top: 5rem;
+ display: flex;
+ flex-direction: column;
+ justify-content: center;
+ /* flex-wrap: wrap; */
+    
+}
+
