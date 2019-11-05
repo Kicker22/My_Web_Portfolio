@@ -1,4 +1,11 @@
 
+body{
+    /* min-height:100%; */
+    background:linear-gradient(0deg,rgba(0, 0, 0, 0.3),rgba(0, 0, 0, 0.3)),url(../../assets/images/cubes-2492010_1920.jpg);
+    background-size:cover;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+}
 .banner{
     /* min-height:100%; */
     background:linear-gradient(0deg,rgba(0, 0, 0, 0.3),rgba(0, 0, 0, 0.3)),url(../../assets/images/cubes-2492010_1920.jpg);
@@ -48,7 +55,7 @@
 }
 .nav-links:hover{
    padding:1rem;
-    background:red;
+   background:linear-gradient(0deg,rgba(36, 15, 71, 0.541),rgba(0, 0, 0, 0.3))
 }
 
 .profImg{
@@ -58,11 +65,10 @@
    
 }
 
-.img{
+.profileImg{
+    border: 1px solid black;
     border-radius: 200px;
     margin-bottom: 2rem;
-    height: 200px;
-    background-image: url(../../assets/images/enguagment.jpg);
     /* background-position: top; */
     background-size: cover;
     background-repeat: no-repeat;
@@ -70,7 +76,7 @@
 }
 
 .about{
-    margin-top: 5rem;
+ padding-top: 5rem;
  display: flex;
  flex-direction: column;
  justify-content: center;
@@ -78,3 +84,17 @@
     
 }
 
+.projects-container{
+    /* background: transparent; */
+
+    flex-wrap: wrap;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+}
+
+.projects-title{
+    color: white;
+    margin-top: 3rem;
+    margin-bottom: 3rem;
+}
