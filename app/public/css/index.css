@@ -8,7 +8,7 @@ body{
 }
 
 .jumbotron{
-   margin: 15rem;
+   margin: 20rem;
 }
 
 .jumbo-hr{
@@ -17,6 +17,7 @@ body{
 .navbar{
     display: flex;
     justify-content: space-between;
+    background: rgb(19, 19, 37);
 }
 .navbar-brand{
     width: 30%;
@@ -30,17 +31,30 @@ body{
     justify-content: space-around;
 
 }
+.link{
+    color: white;
+}
+
+.link:hover{
+    color: yellow;
+    background: lightgray;
+    margin: 0;
+    padding: .5rem;
+}
 
 .icons-container{
 }
 .underline{
     color: black;
-    border: .5px solid black;
+    border: .5px solid white;
     margin-bottom: 4rem;
 }
 
 .about{
- background: rgba(0, 0, 0, 0.24);
+ background: rgba(0, 0, 0, 0.685);
+}
+.aboutMe{
+    padding: 5rem;
 }
 
 .profilePic{
@@ -52,11 +66,14 @@ body{
 .about-text{
     padding: 2rem;
     border: 1px solid black;
+    border-radius: 10px;
+
     margin-top: 1rem;
 
 }
 .projects-container{
     background: transparent;
+    margin-bottom: 5rem;
 }
 .cards-container{
     /* background: rgba(0, 0, 0, 0.048); */
