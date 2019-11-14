@@ -56,6 +56,10 @@ body{
 .aboutMe{
     padding: 5rem;
 }
+.about-text{
+    font-size: 18px;
+    width: 50%;
+}
 
 .profilePic{
     border-radius: 10rem;
