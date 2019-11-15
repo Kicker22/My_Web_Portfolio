@@ -58,7 +58,7 @@ body{
 }
 .about-text{
     font-size: 18px;
-    width: 50%;
+    width: 75%;
 }
 
 .profilePic{
@@ -108,15 +108,19 @@ display: flex;
     box-shadow: 0px 0px 10px 0px whitesmoke;
 }
 
-.contact-container{
-    margin-top: 5rem;
-    display: flex;
-    justify-content: center;
-}
+
 
 .form-container{
     padding: 2rem;
     width: 50%;
     border-radius: 10px;
+}
+
+.contact-section{
+    margin-top: 5rem;
+    padding: 5rem;
+}
+
+.email-link{
 }
 
