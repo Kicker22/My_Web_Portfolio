@@ -1,125 +1,148 @@
-
-body{
+body {
     /* min-height:100%; */
-    background:linear-gradient(0deg,rgba(0, 0, 0, 0.3),rgba(0, 0, 0, 0.3)),url(../../assets/images/cubes-2492010_1920.jpg);
-    background-size:cover;
+    background: linear-gradient(0deg, rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url(../../assets/images/mountains.jpg);
+    background-size: cover;
     background-attachment: fixed;
     background-repeat: no-repeat;
 }
 
-.jumbotron{
-   margin: 20rem;
+.jumbotron {
+    margin: 20rem;
 }
 
-.jumbo-hr{
+.jumbo-hr {
     border: .5px solid white;
 }
-.navbar{
-    display: flex;
-    justify-content: space-between;
-    background: rgb(19, 19, 37);
-}
-.navbar-brand{
-    width: 30%;
-    display: flex;
-    justify-content:center;
+
+.navbar {
+    background: rgb(19, 57, 21);
 }
 
-.nav-links{
-    width: 30%;
-    display: flex;
-    justify-content: space-around;
 
-}
-.link{
+.link {
     color: white;
 }
-.link:hover{
+
+.link:hover {
     color: white;
 }
 
 
-.icons-container{
-}
-.underline{
+.icons-container {}
+
+.underline {
     color: black;
     border: .5px solid white;
     margin-bottom: 4rem;
 }
-
-.about{
- background: rgba(0, 0, 0, 0.685);
-}
-.aboutMe{
+.section-a{
     padding: 5rem;
-}
-.about-text{
-    font-size: 18px;
-    width: 75%;
+  
 }
 
-.profilePic{
-    border-radius: 10rem;
+.siteQuote{
+    padding: 5rem;
+   
+    background: linear-gradient(0deg, rgba(0, 0, 0, 0.742), rgba(0, 0, 0, 0.725)), url(../../assets/images/chalkBoard.jpg);
+
+}
+#jumboQuote{
+    margin: 0;
+}
+.profilePicContainer{
+    
+}
+.profilePic {
+    height: 25rem;
+    border-radius: 3rem;
     border: 1px solid black;
     box-shadow: 0px 0px 10px 0px rgb(3, 3, 3);
 }
 
-.card{
+.about{
+    border-radius: 1rem;
+    padding: 2rem;
+    display: flex;
+  justify-content: center;
+    width: 100%;
+}
+.aboutMeTextContainer{
+    width: 60% ;
+}
+.abmtextContainer{
+ width: 100%;
+}
+.aboutMeText{
+    width: 100%;
+    font-size: 20px;
+    padding: 1rem;
+    border-radius: 1rem;
+    /* border: 1px solid black; */
+}
+
+.card {
+    padding: 1rem;
+    border-radius: 1rem;
     border: 1px solid black;
     box-shadow: 0px 0px 10px 0px gray;
 }
-.about-text{
-    padding: 2rem;
-    border: 1px solid black;
-    box-shadow: 0px 0px 10px 0px rgb(255, 255, 255);
-
-    border-radius: 10px;
-
-    margin-top: 1rem;
-
+.card-img-top{
+    height: 10rem;
+    border-radius: 1rem;
 }
-.projects-container{
-    background: transparent;
-    margin-bottom: 5rem;
+.card1{
+    background: linear-gradient(0deg, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0)), url(../../assets/images/taskList.png);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
 }
-.cards-container{
-    /* background: rgba(0, 0, 0, 0.048); */
+.card2{
+    background: linear-gradient(0deg, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0)), url(../../assets/images/quiz.png);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.projects-container {
+  padding: 5rem;
+}
+
+.cards-container {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
     justify-content: space-evenly;
 
 }
-.video-container{
-width: 75%;
-border-radius: 10px;
-display: flex;
- flex-wrap: wrap;
- justify-content: space-evenly;
+
+.video-container {
+    width: 100%;
+    border-radius: 10px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
 }
 
-.video-player{
+.video-player {
     margin-bottom: 2rem;
     box-shadow: 0px 0px 10px 0px rgba(22, 17, 65, 0.637);
 }
 
-.video-player:hover{
+.video-player:hover {
     box-shadow: 0px 0px 10px 0px whitesmoke;
 }
 
 
 
-.form-container{
+.form-container {
     padding: 2rem;
     width: 50%;
     border-radius: 10px;
 }
 
-.contact-section{
+.contact-section {
     margin-top: 5rem;
     padding: 5rem;
 }
 
-.email-link{
-}
-
+.email-link {}

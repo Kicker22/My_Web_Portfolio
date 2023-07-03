@@ -20,166 +20,138 @@
   <div class="jumbotron jumbotron-fluid bg-transparent">
     <div class="container">
       <h1 class="display-3 text-center text-white">Matthew Sullivan</h1>
-      <p class="lead text-center text-white">Full-Stack Developer</p>
+      <p class="lead text-center text-white">Software Engineer</p>
       <hr class=" jumbo-hr my-2">
       <span class=" text-white d-flex justify-content-center icons-container">
         <a class="mr-3 fab fa-github-square text-white fa-3x" target="..."
           href="https://github.com/Kicker22?tab=repositories"></a>
         <a class="fab fa-linkedin text-white fa-3x" target="..."
           href="https://www.linkedin.com/in/matthew-sullivan-128095176"></a>
-      </span> 
+      </span>
       <p class="text-center text-white mt-2">Scroll down to find more</p>
     </div>
   </div>
-
   <!-- TopNavbar -->
-  <nav class="navbar navbar-expand-sm navbar-dark">
-    <div class="navbar-brand">Matthew</div>
-    <div class="nav-links">
-      <a class="link" href="#projects">Projects</a>
-      <a class="link" href="#videos">Videos</a>
-      <a class=" link email-link"href="mailto:mattsully01@gmail.com" target="...">Contact</a>
+  <nav class="navbar navbar-expand-sm navbar-dark sticky-top ">
+    <a class="navbar-brand" href="#">Navbar</a>
+    <button class="navbar-toggler d-lg-none" type="button" data-toggle="collapse" data-target="#collapsibleNavId"
+      aria-controls="collapsibleNavId" aria-expanded="false" aria-label="Toggle navigation"></button>
+    <div class="collapse navbar-collapse" id="collapsibleNavId">
+      <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
+        <li class="nav-item active">
+          <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">Link</a>
+        </li>
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" id="dropdownId" data-toggle="dropdown" aria-haspopup="true"
+            aria-expanded="false">Dropdown</a>
+          <div class="dropdown-menu" aria-labelledby="dropdownId">
+            <a class="dropdown-item" href="#">Action 1</a>
+            <a class="dropdown-item" href="#">Action 2</a>
+          </div>
+        </li>
+      </ul>
+      <form class="form-inline my-2 my-lg-0">
+        <input class="form-control mr-sm-2" type="text" placeholder="Search">
+        <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+      </form>
     </div>
   </nav>
 
-  <div class="about">
-    <div class="aboutMe container text-center">
-      <h2 class="text-white ">About Me</h2>
-      <hr class="underline" style="width: 50%;">
-      <img class="profilePic " src="../assets/images/10347252_434451953372374_2058425643737259020_n.jpg"
-        style="width: 200px;" alt="Picture of me">
-      <div class="about-text container bg-light">
-        <p> Full-Stack web development professional who is highly focused on
-          designing and developing intuitive user experience's on the web. Proficient in HTML/CSS, JavaScript, Node.js,
-          React.js, SQL and noSQL databases, as well as responsive web design practices. I am Passionate about
-          continuous learning, improving processes, and leveraging technology to create value for businesses and
-          end-user's.
+
+  <div class=" siteQuote bg-dark">
+    <div class="jumbotron jumbotron-fluid siteQuote" id="jumboQuote">
+      <div class="container">
+        <h1 class="display-3 text-white">We are what we repeatedly do. Excellence, therefore, is not an act, but a
+          habit.</h1>
+        <p class="lead text-white">- Aristotle</p>
         </p>
       </div>
     </div>
+  </div>
 
+  <div class="section-a bg-light">
 
-    <div id="projects"class="projects-container  bg-light mt-5">
-      <h2 class=" text-center py-4">Projects</h2>
-      <p class="text-center container text-warning bg-dark">Projects section is currently being updated</p>
-      <hr class="mb-4" style=" width: 35%; border: .5px solid black;">
-      <div class="cards-container container">
+    <div class="about bg-light ">
+      <div class="profilePicContainer mr-5">
+        <img class="profilePic mt-4 " src="../assets/images/profilePic.jpg" alt="Picture of me">
+      </div>
+      <div class="aboutMeTextContainer">
+        <div class="mt-5 abmtextContainer">
+          <h1>About Me</h1>
+          <p class="aboutMeText">Hello, I'm Matt Sullivan, a skilled and passionate web developer with 5 years of
+            experience in crafting exceptional digital experiences. I am driven by a genuine love for technology and the
+            ever-evolving landscape of web development. My goal is to create aesthetically pleasing, functional, and
+            user-friendly websites that exceed expectations and help businesses thrive online.<br><br>
+            With a strong foundation in HTML, CSS, and JavaScript, I have the ability to bring designs to life and build
+            interactive web applications that engage users. I am proficient in various front-end frameworks such as
+            React,
+            Angular, and Vue.js, and have a deep understanding of responsive design principles to ensure seamless
+            experiences across devices.
+            <br><br>
+            In addition to my front-end expertise, I have a solid understanding of back-end development. I am
+            well-versed in server-side languages like Python, PHP, and Ruby, and have experience working with databases
+            such as MySQL and MongoDB.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
 
+  <div class="section-b bg-white">
+    <div id="projects" class="projects-container ">
+      <h1 class=" text-center py-4">Portfolio</h1>
+      <hr class="mb-5" style=" width: 35%; border: .5px solid black;">
+      <div class="cards-container">
 
-
-        <div class="card mb-3" style="max-width: 540px;">
-          <div class="row no-gutters">
-            <div class="col-md-4">
-              <img class="card-img" style="height: 200px;"
-                src="https://i.pinimg.com/originals/fa/a8/b4/faa8b41267b4c806c3a95937cc3c5d28.jpg" alt="Peaches">
-            </div>
-            <div class="col-md-8">
-              <div class="card-body">
-                <h5 class="card-title">Peach</h5>
-                <p class="card-text">Welcome to Peach. Search and find recipes for your next meal!.</p>
-                <a href="https://kicker22.github.io/Peaches/" target="..."><button
-                    class="btn btn-lg btn-primary">View</button></a>
-              </div>
-            </div>
+        <div class="card" style="width: 18rem;">
+          <div class="card-img-top card1"></div>
+          <div class="card-body">
+            <h5 class="card-title">TaskList</h5>
+            <p class="card-text">A simple list that allows the user to write down tasks and filter through existing
+              tasks...</p>
+            <a href="https://kicker22.github.io/TaskList/" target="..." class="btn btn-primary">Go somewhere</a>
           </div>
         </div>
-        <div class="card mb-3" style="max-width: 540px;">
-          <div class="row no-gutters">
-            <div class="col-md-4">
-              <img src="../assets/images/fnaf.png" class="card-img" style="height: 200px;" alt="...">
-            </div>
-            <div class="col-md-8">
-              <div class="card-body">
-                <h5 class="card-title">Memory Game</h5>
-                <p class="card-text">This FNAF insipred mini game will test your memory!</p>
-                <a href="https://fnaf-memory-game.herokuapp.com/" target="..."><button
-                    class="btn btn-lg btn-primary">View</button></a>
-              </div>
-            </div>
+        <div class="card" style="width: 18rem;">
+          <div class="card-img-top card2"></div>
+          <div class="card-body">
+            <h5 class="card-title">Quiz</h5>
+            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's
+              content.</p>
+            <a href="https://kicker22.github.io/Peaches/" class="btn btn-primary">Go somewhere</a>
           </div>
         </div>
-        <div class="card mb-3" style="max-width: 540px;">
-          <div class="row no-gutters">
-            <div class="col-md-4">
-              <img src="./assets/images/Capture.PNG" class="card-img" style="height: 200px;" alt="...">
-            </div>
-            <div class="col-md-8">
-              <div class="card-body">
-                <h5 class="card-title">Bamazon_Rpg_Store</h5>
-                <p class="card-text">This is a simple application using MYSQL </p>
-                <a href="https://www.youtube.com/watch?v=L5A0EZAu1fM&list=PLfyNBwASeS66ZAUebBLM52LxmgeX4fowd&index=2&t=1s" target="..."><button
-                     class="btn btn-lg btn-primary">View</button></a>
-              </div>
-            </div>
+        <div class="card" style="width: 18rem;">
+          <img src="..." class="card-img-top" alt="...">
+          <div class="card-body">
+            <h5 class="card-title">Card title</h5>
+            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's
+              content.</p>
+            <a href="#" class="btn btn-primary">Go somewhere</a>
           </div>
         </div>
-        <div class="card mb-3" style="max-width: 540px;">
-          <div class="row no-gutters">
-            <div class="col-md-4">
-              <img src="./assets/images/taskList.PNG" class="card-img" style="height: 200px;" alt="...">
-            </div>
-            <div class="col-md-8">
-              <div class="card-body">
-                <h5 class="card-title">Task List App</h5>
-                <p class="card-text">This is a Simple task list using basic JS event listeners.  </p>
-                <a href="https://kicker22.github.io/TaskList/" target="..."><button
-                     class="btn btn-lg btn-primary">View</button></a>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="card mb-3" style="max-width: 540px;">
-          <div class="row no-gutters">
-            <div class="col-md-4">
-              <img src="./assets/images/liri.png" class="card-img" style="height: 200px;" alt="...">
-            </div>
-            <div class="col-md-8">
-              <div class="card-body">
-                <h5 class="card-title">liri-Node App</h5>
-                <p class="card-text">Thsi application uses the spotify API to search for Artist and Song info.</p>
-                <a href="https://www.youtube.com/watch?v=HCkAF0vWEFE&list=PLfyNBwASeS66ZAUebBLM52LxmgeX4fowd&index=3&t=8s"
-                  target="..."><button class="btn btn-lg btn-primary">View</button></a>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="card mb-3" style="max-width: 540px;">
-          <div class="row no-gutters">
-            <div class="col-md-4">
-              <img src="./assets/images/Screenshot from 2019-11-23 11-00-55.png" class="card-img" style="height: 200px;" alt="...">
-            </div>
-            <div class="col-md-8">
-              <div class="card-body">
-                <h5 class="card-title">Quiz Time</h5>
-                <p class="card-text">A simple quiz game using jquery</p>
-                <a href="https://kicker22.github.io/Trivia-Game/"
-                  target="..."><button class="btn btn-lg btn-primary">View</button></a>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="card mb-3" style="max-width: 540px;">
-          <div class="row no-gutters">
-            <div class="col-md-4">
-              <img src="./assets/images/momblog.png" class="card-img" style="height: 200px;" alt="...">
-            </div>
-            <div class="col-md-8">
-              <div class="card-body">
-                <h5 class="card-title">Blog Site</h5>
-                <p class="card-text">A simple blog using MongoDB</p>
-                <a href="https://mommie-blog-test.herokuapp.com/"
-                  target="..."><button class="btn btn-lg btn-primary">View</button></a>
-              </div>
-            </div>
+        <div class="card" style="width: 18rem;">
+          <img src="..." class="card-img-top" alt="...">
+          <div class="card-body">
+            <h5 class="card-title">Card title</h5>
+            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's
+              content.</p>
+            <a href="#" class="btn btn-primary">Go somewhere</a>
           </div>
         </div>
       </div>
     </div>
 
 
+  </div>
 
-    <!-- Video Content -->
 
+
+  <!-- Video Content -->
+  <div class="div video-container-wrapper">
     <div id="videos" class="video-container mt-4 bg-dark m-auto">
       <iframe class="video-player mt-4" width="560" height="315" src="https://www.youtube.com/embed/L5A0EZAu1fM"
         frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
@@ -187,14 +159,44 @@
       <iframe class="video-player mt-4" width=" 560" height="315" src="https://www.youtube.com/embed/HCkAF0vWEFE"
         frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
         allowfullscreen></iframe>
+      <iframe class="video-player mt-4" width=" 560" height="315" src="https://www.youtube.com/embed/HCkAF0vWEFE"
+        frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+        allowfullscreen></iframe>
+      <iframe class="video-player mt-4" width=" 560" height="315" src="https://www.youtube.com/embed/HCkAF0vWEFE"
+        frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+        allowfullscreen></iframe>
+    </div>
+  </div>
+
+
+  <footer class="contact-section bg-light text-center">
+
+    <div class="container">
+      <footer class="d-flex flex-wrap justify-content-between align-items-center py-3 my-4 border-top">
+        <div class="col-md-4 d-flex align-items-center">
+          <a href="/" class="mb-3 me-2 mb-md-0 text-muted text-decoration-none lh-1">
+            <svg class="bi" width="30" height="24">
+              <use xlink:href="#bootstrap"></use>
+            </svg>
+          </a>
+          <span class="mb-3 mb-md-0 text-muted">© 2022 Company, Inc</span>
+        </div>
+
+        <ul class="nav col-md-4 justify-content-end list-unstyled d-flex">
+          <li class="ms-3"><a class="text-muted" href="#"><svg class="bi" width="24" height="24">
+                <use xlink:href="#twitter"></use>
+              </svg></a></li>
+          <li class="ms-3"><a class="text-muted" href="#"><svg class="bi" width="24" height="24">
+                <use xlink:href="#instagram"></use>
+              </svg></a></li>
+          <li class="ms-3"><a class="text-muted" href="#"><svg class="bi" width="24" height="24">
+                <use xlink:href="#facebook"></use>
+              </svg></a></li>
+        </ul>
+      </footer>
     </div>
 
-    <footer class="contact-section bg-light text-center">
-
-      <h4>Contact</h4>
-      <a class="email-link"href="mailto:mattsully01@gmail.com" target="..."><button class="btn btn-lg btn-primary">Email Matt</button></a>
-
-    </footer>
+  </footer>
 
 
 
