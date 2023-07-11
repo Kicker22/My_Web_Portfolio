@@ -8,9 +8,10 @@
 } */
 
 
-.navbar{
+.navbar {
     padding: 1%;
 }
+
 .section-a {
     margin: 0;
     background: linear-gradient(0deg, rgba(0, 0, 0, 0.623), rgba(0, 0, 0, 0.583)), url(../../assets/images/cubes.jpg);
@@ -25,7 +26,7 @@
     /* background-size: cover; */
     /* background-position: center; */
     /* background-repeat: no-repeat; */
-    padding: 5rem;
+    padding: 3rem;
     margin: 0;
 }
 
@@ -35,25 +36,27 @@
     display: flex;
     justify-content: center;
 }
-.profilcePicContainer{
-text-align: center;
+
+.profilcePicContainer {
+    text-align: center;
     border-radius: 10px;
 }
 
 .profilePic {
- 
+
     height: 20rem;
     border-radius: 50%;
     border-style: solid 1px white;
 }
 
-.profileDescList{
+.profileDescList {
     border-radius: 5rem;
     display: flex;
     justify-content: space-evenly;
 }
-.descItem{
-    margin-top: 1rem;
+
+.descItem {
+    /* margin-top: 1rem; */
     margin-right: 1rem;
 }
 
@@ -72,47 +75,77 @@ text-align: center;
     font-size: 20px;
 }
 
-.skills-container{
+.skills-container {
     margin-top: 2rem;
     display: flex;
     justify-content: space-around;
 }
 
 
+table {
+    font-family: arial, sans-serif;
+    border-collapse: collapse;
+    width: 100%;
+}
+
+td,
+th {
+    border: 1px solid #dddddd;
+    text-align: left;
+    padding: 8px;
+}
+
+tr:nth-child(even) {
+    background-color: #dddddd;
+}
+
 
 /* mobile style */
 
-@media screen and (max-width: 900px) {
+@media screen and (max-width: 1448px) {
 
-    .quoteText{
+    .quoteText {
         font-style: italic;
         font-size: 2rem;
     }
 
-    .section-b{
-        padding: 2rem;
+    .section-b {
+        padding: 0;
     }
-    .profilcePicContainer{
+
+    .profilcePicContainer {
         text-align: center;
     }
+
     .profilePic {
-        height: 13rem;
+        height: 12rem;
         border-radius: 50%;
         border-style: solid 1px white;
     }
-    .aboutContainer{
+
+    .aboutContainer {
         width: 100%;
     }
-    .ab_Title{
+
+    .ab_Title {
         margin-top: 2rem;
         font-size: 2rem;
     }
-    .short_about{
+
+    .short_about {
+        padding: 0;
         display: inline-block;
-        
+
     }
+
     .aboutMeShort {
         font-size: 16px;
+    }
+
+    .short_about {
+        border-radius: 0;
+
+        padding: 1rem;
     }
 
 
