@@ -1,148 +1,93 @@
-body {
-    /* min-height:100%; */
-    background: linear-gradient(0deg, rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url(../../assets/images/mountains.jpg);
+/* body {
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(0deg, rgba(0, 0, 0, 0.501), rgba(0, 0, 0, 0.41)), url(../../assets/images/mountains.jpg);
     background-size: cover;
     background-attachment: fixed;
     background-repeat: no-repeat;
+} */
+
+.section-a {
+    margin: 0;
+    background: linear-gradient(0deg, rgba(0, 0, 0, 0.623), rgba(0, 0, 0, 0.583)), url(../../assets/images/chalkBoard.jpg);
+}
+
+.section-b {
+    padding: 5rem;
+    margin: 0;
 }
 
 .jumbotron {
-    margin: 20rem;
-}
-
-.jumbo-hr {
-    border: .5px solid white;
-}
-
-.navbar {
-    background: rgb(19, 57, 21);
-}
-
-
-.link {
-    color: white;
-}
-
-.link:hover {
-    color: white;
-}
-
-
-.icons-container {}
-
-.underline {
-    color: black;
-    border: .5px solid white;
-    margin-bottom: 4rem;
-}
-.section-a{
-    padding: 5rem;
-  
-}
-
-.siteQuote{
-    padding: 5rem;
-   
-    background: linear-gradient(0deg, rgba(0, 0, 0, 0.742), rgba(0, 0, 0, 0.725)), url(../../assets/images/chalkBoard.jpg);
-
-}
-#jumboQuote{
     margin: 0;
-}
-.profilePicContainer{
-    
-}
-.profilePic {
-    height: 25rem;
-    border-radius: 3rem;
-    border: 1px solid black;
-    box-shadow: 0px 0px 10px 0px rgb(3, 3, 3);
-}
-
-.about{
-    border-radius: 1rem;
-    padding: 2rem;
+    background-color: transparent;
     display: flex;
-  justify-content: center;
-    width: 100%;
-}
-.aboutMeTextContainer{
-    width: 60% ;
-}
-.abmtextContainer{
- width: 100%;
-}
-.aboutMeText{
-    width: 100%;
-    font-size: 20px;
-    padding: 1rem;
-    border-radius: 1rem;
-    /* border: 1px solid black; */
-}
-
-.card {
-    padding: 1rem;
-    border-radius: 1rem;
-    border: 1px solid black;
-    box-shadow: 0px 0px 10px 0px gray;
-}
-.card-img-top{
-    height: 10rem;
-    border-radius: 1rem;
-}
-.card1{
-    background: linear-gradient(0deg, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0)), url(../../assets/images/taskList.png);
-    background-position: center;
-    background-size: cover;
-    background-repeat: no-repeat;
-}
-.card2{
-    background: linear-gradient(0deg, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0)), url(../../assets/images/quiz.png);
-    background-position: center;
-    background-size: cover;
-    background-repeat: no-repeat;
-}
-
-.projects-container {
-  padding: 5rem;
-}
-
-.cards-container {
-    display: flex;
-    flex-wrap: wrap;
     justify-content: center;
-    justify-content: space-evenly;
-
 }
 
-.video-container {
-    width: 100%;
-    border-radius: 10px;
+.profilePic {
+    margin-right: 2rem;
+    height: 20rem;
+    border-radius: 50%;
+    border-style: solid 1px white;
+}
+
+.aboutContainer {
+    width: 75%;
+}
+
+.short_about {
     display: flex;
-    flex-wrap: wrap;
     justify-content: space-evenly;
 }
 
-.video-player {
-    margin-bottom: 2rem;
-    box-shadow: 0px 0px 10px 0px rgba(22, 17, 65, 0.637);
+.aboutMeShort {
+    font-size: 20px;
 }
 
-.video-player:hover {
-    box-shadow: 0px 0px 10px 0px whitesmoke;
+.skills-container{
+    margin-top: 2rem;
+    display: flex;
+    justify-content: space-around;
 }
 
 
 
-.form-container {
-    padding: 2rem;
-    width: 50%;
-    border-radius: 10px;
-}
+/* mobile style */
 
-.contact-section {
-    margin-top: 5rem;
-    padding: 5rem;
-}
+@media screen and (max-width: 900px) {
 
-.email-link {}
+    .quoteText{
+        font-style: italic;
+        font-size: 2rem;
+    }
+
+    .section-b{
+        padding: 2rem;
+    }
+    .profilcePicContainer{
+        text-align: center;
+    }
+    .profilePic {
+        height: 13rem;
+        border-radius: 50%;
+        border-style: solid 1px white;
+    }
+    .aboutContainer{
+        width: 100%;
+    }
+    .ab_Title{
+        margin-top: 2rem;
+        font-size: 2rem;
+    }
+    .short_about{
+        display: inline-block;
+        
+    }
+    .aboutMeShort {
+        font-size: 16px;
+    }
+
+
+
+
+}
