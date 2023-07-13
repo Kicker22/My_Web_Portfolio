@@ -1,0 +1,66 @@
+body {
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(0deg, rgba(0, 0, 0, 0.501), rgba(0, 0, 0, 0.41)), url(../../assets/images/road.jpg);
+    background-size: cover;
+    background-position: 50% 50%;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+}
+/* body {
+    background-image: url('w3css.gif');
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: 50% 50%;
+  } */
+
+.jumbotron {
+    margin: 0;
+    height: 54rem;
+    background-color: transparent;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+
+}
+
+.jumbo-info {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.flavorText {
+    display: flex;
+    justify-content: center;
+}
+
+.flavorText,
+p {
+    margin-right: 1rem;
+}
+
+
+.profilePic {
+
+    height: 20rem;
+    border-radius: 50%;
+    border-style: solid 1px white;
+}
+
+
+
+@media screen and (max-width: 1448px) {
+    body {
+        margin: 0;
+        padding: 0;
+        background: linear-gradient(0deg, rgba(0, 0, 0, 0.501), rgba(0, 0, 0, 0.41)), url(../../assets/images/road.jpg);
+        background-size: cover;
+        background-attachment: fixed;
+        background-repeat: no-repeat;
+        background-position: center;
+    }
+
+}
