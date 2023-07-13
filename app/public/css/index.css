@@ -13,8 +13,9 @@
 }
 
 .section-a {
+
     margin: 0;
-    background: linear-gradient(0deg, rgba(0, 0, 0, 0.623), rgba(0, 0, 0, 0.583)), url(../../assets/images/cubes.jpg);
+    background: linear-gradient(0deg, rgba(0, 0, 0, 0.623), rgba(0, 0, 0, 0.583)), url(../../assets/images/zion.jpg);
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -22,15 +23,10 @@
 }
 
 .section-b {
-    /* background: linear-gradient(0deg, rgba(0, 0, 0, 0.623), rgba(0, 0, 0, 0.583)), url(../../assets/images/mountains.jpg); */
-    /* background-size: cover; */
-    /* background-position: center; */
-    /* background-repeat: no-repeat; */
-    padding: 3rem;
-    margin: 0;
 }
 
 .jumbotron {
+
     margin: 0;
     background-color: transparent;
     display: flex;
@@ -38,8 +34,9 @@
 }
 
 .profilcePicContainer {
+    margin-top: 2rem;
     text-align: center;
-    border-radius: 10px;
+    /* border-radius: 10px; */
 }
 
 .profilePic {
@@ -63,9 +60,12 @@
 .aboutContainer {
     width: 50%;
 }
+.ab_Title{
+    margin-top: 2rem;
+}
 
 .short_about {
-    border-radius: 3rem;
+    /* border-radius: 3rem; */
     padding: 2rem;
     display: flex;
     justify-content: space-evenly;
@@ -91,6 +91,7 @@ table {
 td,
 th {
     border: 1px solid #dddddd;
+
     text-align: left;
     padding: 8px;
 }
@@ -103,7 +104,7 @@ tr:nth-child(even) {
 /* mobile style */
 
 @media screen and (max-width: 1448px) {
-
+  
     .quoteText {
         font-style: italic;
         font-size: 2rem;

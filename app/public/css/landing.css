@@ -63,4 +63,10 @@ p {
         background-position: center;
     }
 
+    .profilePic {
+        height: 15rem;
+        border-radius: 50%;
+        border-style: solid 1px white;
+    }
+
 }
