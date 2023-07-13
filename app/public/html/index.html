@@ -21,32 +21,31 @@
 
 <body class="">
   <nav class="navbar navbar-expand-sm navbar-dark sticky-top bg-dark">
-    
-    <a class="navbar-brand" href="index.html">MS</a>
-    <button class="navbar-toggler navbar-toggler-icon d-lg" type="button" data-toggle="collapse" data-target="#collapsibleNavId"
-      aria-controls="collapsibleNavId" aria-expanded="false" aria-label="Toggle navigation"></button>
+
+    <a class="navbar-brand" href="/">MS</a>
+    <button class="navbar-toggler navbar-toggler-icon d-lg" type="button" data-toggle="collapse"
+      data-target="#collapsibleNavId" aria-controls="collapsibleNavId" aria-expanded="false"
+      aria-label="Toggle navigation"></button>
     <div class="collapse navbar-collapse" id="collapsibleNavId">
       <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
         <li class="nav-item ">
-          <a class="nav-link" href="#">Home </a>
+          <a class="nav-link" href="/home">Home</a>
         </li>
         <li class="nav-item active">
-          <a class="nav-link" href="#">About<span class="sr-only">(current)</span></a>
+          <a class="nav-link" href="/about">About<span class="sr-only">(current)</span></a>
         </li>
-        <li class="nav-item dropdown">
-          <a class="nav-link dropdown-toggle" href="#" id="dropdownId" data-toggle="dropdown" aria-haspopup="true"
-            aria-expanded="false">More</a>
-          <div class="dropdown-menu" aria-labelledby="dropdownId">
-            <a class="dropdown-item" href="#">Featured Projects</a>
-            <a class="dropdown-item" href="#">Videos</a>
-          </div>
+        <li class="nav-item">
+          <a class="nav-link" href="/projects">Projects</span></a>
+        </li>
+        <li class="nav-item ">
+          <a class="nav-link" href="/videos">Videos</span></a>
         </li>
       </ul>
     </div>
   </nav>
 
   <div class="section-a">
-    <div class="jumbotron jumbotron-fluid">
+    <div class="jumbotron jumbotron-fluid mt-2 mb-2 ">
       <div class="container about-container">
         <h1 class="display-3 text-white quoteText fade-in">We are what we repeatedly do. Excellence, therefore, is not
           an act, but a
@@ -59,7 +58,7 @@
   <div class="section-b bg-dark">
     <div class="short_about bg-light">
       <div class="profilcePicContainer bg-light">
-        <img src="./assets/images/Capture.PNG" alt="" class="profilePic">
+        <img  src="./assets/images/Capture.PNG" alt="" class="profilePic">
         <h1>Matt Sullivan</h1>
         <ul class="profileDescList border-top border-bottom" style="list-style: none;">
           <li class="descItem">Software Enginner,</li>
@@ -154,7 +153,7 @@
           digital experiences, I would love to discuss how I can contribute to your next project. Let's connect and
           bring your ideas to life on the web!
         </p>
-        <button type="button" class="btn btn-primary">View Projects</button>
+        <a type="button" href="/projects" class="btn btn-primary">View Projects</a>
       </div>
     </div>
   </div>
