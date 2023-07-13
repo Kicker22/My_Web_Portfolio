@@ -15,7 +15,7 @@
 .section-a {
 
     margin: 0;
-    background: linear-gradient(0deg, rgba(0, 0, 0, 0.501), rgba(0, 0, 0, 0.41)), url(../../assets/images/zion.jpg);
+    background: linear-gradient(0deg, rgba(0, 0, 0, 0.501), rgba(0, 0, 0, 0.41)), url(../assets/images/zion.JPG);
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
