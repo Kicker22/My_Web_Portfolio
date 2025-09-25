@@ -1,73 +1,169 @@
-body {
-    margin: 0;
-    padding: 0;
-    background: linear-gradient(0deg, rgba(0, 0, 0, 0.501), rgba(0, 0, 0, 0.41)), url(../../assets/images/road.jpg);
-    /* content-visibility: auto; */
-    background-size: cover;
-    background-position: 50% 50%;
-    background-attachment: fixed;
-    background-repeat: no-repeat;
-}
-/* body {
-    background-image: url('w3css.gif');
-    background-repeat: no-repeat;
-    background-attachment: fixed;
-    background-position: 50% 50%;
-  } */
-
-.jumbotron {
-    margin: 0;
-    height: 54rem;
-    background-color: transparent;
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-attachment: fixed;
-
+:root {
+  --glass-bg: rgba(15, 19, 32, 0.6);
+  --glass-brd: rgba(255, 255, 255, .12);
+  --spot-x: 50%;
+  --spot-y: 40%;
 }
 
-.jumbo-info {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
+html, body {
+  height: 100%;
+  background: #0b0f14;
+  color-scheme: dark;
 }
 
-.flavorText {
-    display: flex;
-    justify-content: center;
+/* ===== LAYERS =====
+   canvas (0) < overlay (1) < content (2) */
+#bg-arcade {
+  position: fixed;
+  inset: 0;
+  width: 100vw;
+  height: 100vh;
+  z-index: 0;
+  display: block;
 }
 
-.flavorText,
-p {
-    margin-right: .5rem;
+.bg-overlay {
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  z-index: 1;
+  background:
+    radial-gradient(1200px 700px at var(--spot-x) var(--spot-y),
+      rgba(0, 119, 255, .12), transparent 60%),
+    linear-gradient(180deg, rgba(11, 15, 20, .70) 0%, rgba(17, 24, 39, .62) 100%);
 }
 
+.page-content {
+  position: relative;
+  z-index: 2;
+}
 
+/* Nav */
+.navbar {
+  background: rgba(0, 0, 0, .55) !important;
+  backdrop-filter: blur(8px);
+}
+
+/* Hero */
+.hero {
+  min-height: 86vh;
+  display: grid;
+  place-items: center;
+  text-align: center;
+  color: #fff;
+  position: relative;
+}
+.hero-card {
+  max-width: 780px;
+  background: var(--glass-bg);
+  border: 1px solid var(--glass-brd);
+  border-radius: 18px;
+  padding: clamp(1rem, 3vw, 2rem);
+  box-shadow: 0 30px 80px rgba(0, 0, 0, .45);
+  backdrop-filter: blur(8px);
+}
+
+/* Avatar + buttons */
 .profilePic {
+  width: 156px;
+  height: 156px;
+  object-fit: cover;
+  border-radius: 50%;
+  border: 3px solid rgba(255, 255, 255, .18);
+  box-shadow: 0 12px 36px rgba(0, 0, 0, .45);
+  transition: transform .3s ease;
+}
+.profilePic:hover { transform: translateY(-2px); }
 
-    height: 20rem;
-    border-radius: 50%;
-    border-style: solid 1px white;
+.btn-ghost {
+  background: transparent;
+  border: 1px solid rgba(255, 255, 255, .35);
+  color: #fff;
+}
+.btn-ghost:hover { background: rgba(255, 255, 255, .08); color: #fff; }
+
+.kbd {
+  border: 1px solid rgba(255, 255, 255, .25);
+  border-bottom-width: 2px;
+  padding: 1px 6px;
+  border-radius: 6px;
+  font-size: .8rem;
+  color: #e5e7eb;
 }
 
+/* HUD */
+.hud {
+  position: fixed;
+  bottom: 18px;
+  right: 18px;
+  z-index: 10;
+  display: flex;
+  gap: 8px;
+  align-items: center;
+  background: rgba(15, 19, 32, .6);
+  border: 1px solid rgba(255, 255, 255, .12);
+  border-radius: 999px;
+  padding: 8px 10px;
+  backdrop-filter: blur(6px);
+  color: #e5e7eb;
+  user-select: none;
+}
+.hud .pill {
+  background: rgba(255, 255, 255, .08);
+  border: 1px solid rgba(255, 255, 255, .12);
+  border-radius: 999px;
+  padding: 4px 10px;
+  font-size: .875rem;
+}
+.hud button {
+  border-radius: 999px !important;
+  padding: 4px 10px;
+}
 
+/* Command palette */
+.cmdk {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, .35);
+  backdrop-filter: blur(4px);
+  display: none;
+  align-items: flex-start;
+  justify-content: center;
+  padding: 10vh 1rem 2rem;
+  z-index: 1055;
+}
+.cmdk.open { display: flex; }
+.cmdk-panel {
+  width: min(720px, 92vw);
+  border-radius: 16px;
+  overflow: hidden;
+  background: #0b1020;
+  border: 1px solid rgba(255, 255, 255, .12);
+  box-shadow: 0 30px 80px rgba(0, 0, 0, .45);
+  color: #e5e7eb;
+}
+.cmdk-input {
+  width: 100%;
+  padding: 14px 16px;
+  background: #0d1428;
+  border: 0;
+  color: #fff;
+  outline: none;
+  font-size: 1rem;
+}
+.cmdk-list { max-height: 50vh; overflow: auto; }
+.cmdk-item {
+  padding: 12px 16px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  border-top: 1px solid rgba(255, 255, 255, .06);
+  cursor: pointer;
+}
+.cmdk-item:hover, .cmdk-item[aria-selected="true"] {
+  background: rgba(0, 119, 255, .15);
+}
 
-@media screen and (max-width: 1448px) {
-    body {
-        margin: 0;
-        padding: 0;
-        background: linear-gradient(0deg, rgba(0, 0, 0, 0.501), rgba(0, 0, 0, 0.41)), url(../../assets/images/road.jpg);
-        background-size: cover;
-        background-attachment: fixed;
-        background-repeat: no-repeat;
-        background-position: center;
-    }
-
-    .profilePic {
-        height: 15rem;
-        border-radius: 50%;
-        border-style: solid 1px white;
-    }
-
+@media (prefers-reduced-motion: reduce) {
+  .profilePic { transition: none; }
 }

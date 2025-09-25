@@ -2,198 +2,455 @@
 <html lang="en">
 
 <head>
-  <title>CMS</title>
-  <!-- Required meta tags -->
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-  <!-- Font awesome kit -->
-  <script src="https://kit.fontawesome.com/adb19d7eeb.js" crossorigin="anonymous"></script>
-  <!-- Bootstrap CSS -->
-  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
-    integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-  <!-- link to external stylesheet -->
-  <link rel="stylesheet" type="text/css" href="./css/index.css">
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+  <meta charset="utf-8" />
+  <title>About — Matt Sullivan</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <!-- Font Awesome Kit -->
   <script src="https://kit.fontawesome.com/adb19d7eeb.js" crossorigin="anonymous"></script>
 
+  <!-- Bootstrap 5 CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous" />
 
+  <!-- Site CSS -->
+  <link rel="stylesheet" href="./css/index.css" />
+
+  <style>
+    /* ===== Font Awesome guard: prevents italic “lines” when fonts don’t apply ===== */
+    .fa-solid,
+    .fas {
+      font-family: "Font Awesome 6 Free" !important;
+      font-weight: 900 !important;
+      font-style: normal !important;
+    }
+
+    .fa-regular,
+    .far {
+      font-family: "Font Awesome 6 Free" !important;
+      font-weight: 400 !important;
+      font-style: normal !important;
+    }
+
+    .fa-brands,
+    .fab {
+      font-family: "Font Awesome 6 Brands" !important;
+      font-weight: 400 !important;
+      font-style: normal !important;
+    }
+
+    .fa-solid::before,
+    .fas::before,
+    .fa-regular::before,
+    .far::before,
+    .fa-brands::before,
+    .fab::before {
+      display: inline-block;
+    }
+
+    /* ---- Your existing page polish ---- */
+    .hero {
+      background:
+        radial-gradient(1200px 600px at 50% -10%, rgba(0, 123, 255, .25), transparent 60%),
+        linear-gradient(180deg, #0b0f14 0%, #0f1720 100%);
+      color: #fff;
+    }
+
+    .profilePic {
+      width: 140px;
+      height: 140px;
+      object-fit: cover;
+      border-radius: 50%;
+      border: 3px solid rgba(255, 255, 255, .2);
+      box-shadow: 0 10px 30px rgba(0, 0, 0, .4);
+    }
+
+    .tech-badge {
+      border: 1px solid rgba(255, 255, 255, .2);
+      border-radius: 999px;
+      padding: .35rem .75rem;
+      font-size: .9rem;
+      white-space: nowrap;
+      backdrop-filter: blur(2px);
+    }
+
+    .stat-card .icon {
+      font-size: 1.6rem;
+      opacity: .85;
+    }
+
+    .project-card img {
+      object-fit: cover;
+      height: 160px;
+    }
+
+    .section-title {
+      letter-spacing: .3px;
+    }
+
+    .lead-tight {
+      line-height: 1.5;
+    }
+
+    .sticky-card {
+      top: 1rem;
+    }
+
+    @media (min-width: 992px) {
+      .sticky-card {
+        position: sticky;
+      }
+    }
+  </style>
 </head>
 
-<body class="">
-  <nav class="navbar navbar-expand-sm navbar-dark sticky-top bg-dark">
+<body class="bg-dark text-light">
+  <!-- Header -->
+  <header>
+    <nav class="navbar navbar-expand-md navbar-dark bg-dark sticky-top" aria-label="Primary">
+      <div class="container">
+        <a class="navbar-brand fw-semibold" href="/">MS</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNav"
+          aria-controls="mainNav" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
 
-    <a class="navbar-brand" href="/">MS</a>
-    <button class="navbar-toggler navbar-toggler-icon d-lg" type="button" data-toggle="collapse"
-      data-target="#collapsibleNavId" aria-controls="collapsibleNavId" aria-expanded="false"
-      aria-label="Toggle navigation"></button>
-    <div class="collapse navbar-collapse" id="collapsibleNavId">
-      <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
-        <li class="nav-item ">
-          <a class="nav-link" href="/home">Home</a>
-        </li>
-        <li class="nav-item active">
-          <a class="nav-link" href="/about">About<span class="sr-only">(current)</span></a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="/projects">Projects</span></a>
-        </li>
-        <li class="nav-item ">
-          <a class="nav-link" href="/videos">Videos</span></a>
-        </li>
-      </ul>
-    </div>
-  </nav>
-
-  <div class="section-a">
-    <div class="jumbotron jumbotron-fluid mt-2 mb-2 ">
-      <div class="container about-container">
-        <h1 class="display-3 text-white quoteText fade-in">We are what we repeatedly do. Excellence, therefore, is not
-          an act, but a
-          habit.</h1>
-        <p class="lead text-white quoteText">- Aristotle</p>
-      </div>
-    </div>
-  </div>
-
-  <div class="section-b bg-dark">
-    <div class="short_about bg-light">
-      <div class="profilcePicContainer bg-light">
-        <img  src="./assets/images/Capture.PNG" alt="" class="profilePic">
-        <h1>Matt Sullivan</h1>
-        <ul class="profileDescList border-top border-bottom" style="list-style: none;">
-          <li class="descItem">Software Enginner,</li>
-          <li class="descItem">UI/UX Designer,</li>
-          <li class="descItem">Podcast Host,</li>
-        </ul>
-        <div class="resume">
-          <table class=" table table-striped mt-5">
-            <thead class="thead-dark">
-              <tr>
-                <th scope="col">Company</th>
-                <th scope="col">Title</th>
-                <th scope="col">Dates</th>
-              </tr>
-            </thead>
-
-            <tr>
-              <td>Intermountain Health</td>
-              <td>Software Engineer</td>
-              <td>2021-Present</td>
-            </tr>
-            <tr>
-              <td>Intermountain Health</td>
-              <td>Lead Surgical Tech  (Endoscopy)</td>
-              <td>2018-2021</td>
-            </tr>
-            <tr>
-              <td>Discover Financial Services</td>
-              <td>Collections Officer</td>
-              <td>2016-2018</td>
-            </tr>
-            <tr>
-              <td>Best Buy</td>
-              <td>Microsoft Expert Rep</td>
-              <td>2015-2016</td>
-            </tr>
-          </table>
-          <table class=" table table-striped mt-5">
-            <thead class="thead-dark">
-
-              <tr>
-                <th>Education</th>
-                <th>Title</th>
-              </tr>
-            </thead>
-            <tr>
-              <td>WGU</td>
-              <td>Bachelors Software Development</td>
-            </tr>
-            <tr>
-              <td>University of Utah </td>
-              <td>Full-Stack Developer Certification</td>
-            </tr>
-            <tr>
-              <td>EMT Utah</td>
-              <td>Emergency Medical Technician Certification</td>
-            </tr>
-           
-          </table>
+        <div id="mainNav" class="collapse navbar-collapse">
+          <ul class="navbar-nav ms-auto">
+            <li class="nav-item"><a class="nav-link" href="/">Home</a></li>
+            <li class="nav-item"><a class="nav-link active" href="/about" aria-current="page">About</a></li>
+            <li class="nav-item"><a class="nav-link" href="/videos">Videos</a></li>
+          </ul>
         </div>
       </div>
-      <div class="aboutContainer">
-        <h1 class="ab_Title">A little about me</h1>
-        <p class="aboutMeShort"> Hello, I'm Matt, a skilled and passionate web developer with 5 years of
-          experience in crafting exceptional digital experiences. I am driven by a genuine love for technology and the
-          ever-evolving landscape of web development. My goal is to create aesthetically pleasing, functional, and
-          user-friendly websites that exceed expectations and help businesses thrive online.
-          <br><br>
-          With a strong foundation in HTML, CSS, and JavaScript, I have the ability to bring designs to life and build
-          interactive web applications that engage users. I am proficient in various front-end frameworks such as React,
-          Angular, and Vue.js, and have a deep understanding of responsive design principles to ensure seamless
-          experiences across devices.
-          In addition to my front-end expertise, I have a solid understanding of back-end development. I am well-versed
-          in server-side languages like PHP, and Java, and have experience working with databases such as MySQL, Postgres
-          and MongoDB. I can architect efficient and scalable solutions that power dynamic web applications and deliver
-          optimal performance.
-          <br><br>
-          I am an avid learner and keep myself updated with the latest industry trends and emerging technologies. This
-          allows me to integrate cutting-edge tools and techniques into my projects, ensuring that I deliver modern and
-          future-proof solutions to clients.
-          <br><br>
-          Collaboration and effective communication are fundamental aspects of my work ethic. I thrive in
-          cross-functional teams, working closely with designers, project managers, and clients to understand their
-          vision and deliver results that align with their goals. I value feedback and always strive for continuous
-          improvement, refining my skills and staying adaptable to meet the ever-changing demands of the industry.
-          <br><br>
-          Whether it's building a new website from scratch, revamping an existing one, or troubleshooting complex
-          issues, I approach every project with enthusiasm and attention to detail. I take pride in writing clean,
-          maintainable code and following best practices to deliver high-quality, robust solutions.
-          <br><br>
-          If you're looking for a dedicated and experienced web developer who is committed to creating exceptional
-          digital experiences, I would love to discuss how I can contribute to your next project. Let's connect and
-          bring your ideas to life on the web!
-        </p>
-        <a type="button" href="/projects" class="btn btn-primary">View Projects</a>
+    </nav>
+  </header>
+
+  <!-- Hero -->
+  <section class="hero py-5">
+    <div class="container">
+      <div class="row align-items-center gy-4">
+        <div class="col-12 col-lg-8">
+          <h1 class="display-5 fw-bold section-title mb-3">Matt Sullivan</h1>
+          <p class="lead lead-tight mb-3 text-white-50">
+            Software Engineer · UI/UX Designer · GameDeveloper
+          </p>
+          <p class="mb-4">
+            “We are what we repeatedly do. Excellence, therefore, is not an act, but a habit.” — Aristotle
+          </p>
+          <div class="d-flex flex-wrap gap-2">
+            <a href="/projects" class="btn btn-primary me-2 mb-2">
+              <span class="fa-solid fa-code me-2" aria-hidden="true"></span> View Projects
+            </a>
+            <a href="/videos" class="btn btn-outline-light mb-2">
+              <span class="fa-solid fa-video me-2" aria-hidden="true"></span> Latest Videos
+            </a>
+          </div>
+        </div>
+
+        <div class="col-12 col-lg-4 text-lg-end text-center">
+          <img class="profilePic" src="./assets/images/Capture.PNG" alt="Portrait of Matt Sullivan" loading="lazy" />
+          <div class="mt-3 d-flex justify-content-center justify-content-lg-end gap-3">
+            <a href="https://github.com/Kicker22" class="text-white-50" aria-label="GitHub Profile">
+              <span class="fa-brands fa-square-github fa-lg" aria-hidden="true"></span>
+            </a>
+            <!--
+            <a href="https://www.linkedin.com/in/your-handle" class="text-white-50" aria-label="LinkedIn">
+              <span class="fa-brands fa-linkedin fa-lg" aria-hidden="true"></span>
+            </a>
+            -->
+          </div>
+        </div>
       </div>
     </div>
-  </div>
+  </section>
 
-  <div class="container">
-    <footer class="d-flex flex-wrap justify-content-between align-items-center py-3 my-4 border-top">
-      <p class="col-md-4 mb-0 text-muted">© 2023 Matt Sullivan Portfolio</p>
+  <!-- At a glance stats -->
+  <section class="py-5">
+    <div class="container">
+      <div class="row g-3">
+        <div class="col-12 col-md-4">
+          <div class="stat-card border rounded-3 p-4 h-100">
+            <div class="d-flex align-items-center gap-3">
+              <span class="icon fa-solid fa-calendar-check" aria-hidden="true"></span>
+              <div>
+                <div class="h4 mb-0">5+ years</div>
+                <div class="text-white-50 small">Professional SE experience</div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-12 col-md-4">
+          <div class="stat-card border rounded-3 p-4 h-100">
+            <div class="d-flex align-items-center gap-3">
+              <span class="icon fa-solid fa-diagram-project" aria-hidden="true"></span>
+              <div>
+                <div class="h4">Healthcare, web apps, tooling &amp; AI</div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-12 col-md-4">
+          <div class="stat-card border rounded-3 p-4 h-100">
+            <div class="d-flex align-items-center gap-3">
+              <span class="icon fa-solid fa-headset" aria-hidden="true"></span>
+              <div>
+                <div class="h4 mb-0">GameDeveloper</div>
+                <div class="text-white-50 small">Unity + C# + Hobbyist</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div><!-- /row -->
+    </div>
+  </section>
 
-      <a href="/"
-        class="col-md-4 d-flex align-items-center justify-content-center mb-3 mb-md-0 me-md-auto link-dark text-decoration-none">
-        <svg class="bi me-2" width="40" height="32">
-          <use xlink:href="#bootstrap"></use>
-        </svg>
-      </a>
+  <!-- Skills / Stack -->
+  <section class="py-5 bg-black bg-opacity-25">
+    <div class="container">
+      <h2 class="h3 section-title mb-4">Core Skills &amp; Stack</h2>
+      <div class="row g-3">
+        <div class="col-12 col-lg-7">
+          <div class="d-flex flex-wrap gap-2">
+            <span class="tech-badge">JavaScript / TypeScript</span>
+            <span class="tech-badge">React</span>
+            <span class="tech-badge">HTML</span>
+            <span class="tech-badge">CSS</span>
+            <span class="tech-badge">Python</span>
+            <span class="tech-badge">Java</span>
+            <span class="tech-badge">Postgres</span>
+            <span class="tech-badge">MySQL</span>
+            <span class="tech-badge">MongoDB</span>
+            <span class="tech-badge">Docker</span>
+            <span class="tech-badge">CI/CD</span>
+            <span class="tech-badge">C#</span>
+            <span class="tech-badge">HL7</span>
+            <span class="tech-badge">SMART/FHIR</span>
+            <span class="tech-badge">Unity</span>
+            <span class="tech-badge">Git</span>
+            <span class="tech-badge">Linux</span>
+          </div>
+        </div>
+        <div class="col-12 col-lg-5">
+          <div class="border rounded-3 p-3">
+            <div class="d-flex align-items-start">
+              <span class="fa-solid fa-bullseye mt-1 me-3" aria-hidden="true"></span>
+              <p class="mb-0 text-white-50">
+                I bridge polished interfaces with robust services. I value clarity, maintainability, and steady
+                iteration over flash.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div><!-- /row -->
+    </div>
+  </section>
 
-      <ul class="nav col-md-4 justify-content-end">
-        <li class="nav-item"><a href="#" class="nav-link px-2 text-muted">Home</a></li>
-        <li class="nav-item"><a href="#" class="nav-link px-2 text-muted">Projects</a></li>
-        <li class="nav-item"><a href="#" class="nav-link px-2 text-muted">Videos</a></li>
-        <!-- <li class="nav-item"><a href="#" class="nav-link px-2 text-muted"></a></li>
-        <li class="nav-item"><a href="#" class="nav-link px-2 text-muted">About</a></li> -->
-      </ul>
-    </footer>
-  </div>
+  <!-- Featured Work -->
+  <section class="py-5">
+    <div class="container">
+      <div class="d-flex align-items-center justify-content-between mb-3">
+        <h2 class="h3 section-title mb-0">Featured Work</h2>
+      </div>
 
+      <div class="mb-4 text-white-50">
+        <p class="mb-2">
+          While I can’t share source code from my professional work due to HIPAA and confidentiality standards,
+          here are some of the engineering areas I’ve contributed to:
+        </p>
+        <ul class="list-unstyled d-flex flex-wrap gap-2">
+          <li class="badge text-bg-secondary text-white fw-normal px-3 py-2">AI-Assisted Radiology Reporting</li>
+          <li class="badge text-bg-secondary text-white fw-normal px-3 py-2">Medical Device Integration Platforms</li>
+          <li class="badge text-bg-secondary text-white fw-normal px-3 py-2">Healthcare Data Warehousing</li>
+          <li class="badge text-bg-secondary text-white fw-normal px-3 py-2">Custom EHR Integrations</li>
+          <li class="badge text-bg-secondary text-white fw-normal px-3 py-2">Medical Imaging Analysis Tools</li>
+          <li class="badge text-bg-secondary text-white fw-normal px-3 py-2">Patient Engagement Applications</li>
+          <li class="badge text-bg-secondary text-white fw-normal px-3 py-2">Healthcare Analytics Dashboards</li>
+          <li class="badge text-bg-secondary text-white fw-normal px-3 py-2">Clinical Decision Support Systems</li>
+          <li class="badge text-bg-secondary text-white fw-normal px-3 py-2">Workflow Automation</li>
+          <li class="badge text-bg-secondary text-white fw-normal px-3 py-2">Anticoagulation EMR Dashboards</li>
+        </ul>
+      </div>
 
-  <!-- Optional JavaScript -->
-  <!-- <script type="module" src="../quotesApi.js"></script> -->
+      <div class="row g-4">
+        <!-- Project 1 -->
+        <div class="col-12 col-md-6 col-lg-4">
+          <div class="card project-card h-100 bg-dark border">
+            <img src="/assets/images/Codeforge.png" class="card-img-top" alt="Screenshot of Project 1" loading="lazy" />
+            <div class="card-body">
+              <h3 class="h5">Codeforge</h3>
+              <p class="text-white-50 small mb-3">
+                Personal learning project to master Data Structures &amp; Algorithms. Includes concept writeups,
+                implementations, and small JS/HTML visualizations.
+              </p>
+              <div class="d-flex flex-wrap gap-2 mb-3">
+                <span class="badge text-bg-secondary">DSA</span>
+                <span class="badge text-bg-secondary">CS Fundamentals</span>
+                <span class="badge text-bg-secondary">Programming</span>
+              </div>
+              <a href="https://github.com/Kicker22/CodeForge" class="stretched-link">GitHub</a>
+            </div>
+          </div>
+        </div>
+        <!-- Project 2 -->
+        <div class="col-12 col-md-6 col-lg-4">
+          <div class="card project-card h-100 bg-dark border">
+            <img src="/assets/images/project2.jpg" class="card-img-top" alt="Screenshot of Project 2" loading="lazy" />
+            <div class="card-body">
+              <h3 class="h5">OpenThought</h3>
+              <p class="text-white-50 small mb-3">
+                Decentralized platform concept for authentic idea ownership and provenance.
+              </p>
+              <div class="d-flex flex-wrap gap-2 mb-3">
+                <span class="badge text-bg-secondary">Next.js</span>
+                <span class="badge text-bg-secondary">Web3.Storage</span>
+                <span class="badge text-bg-secondary">Ethers.js</span>
+              </div>
+              <a href="/projects#openthought" class="stretched-link">Details</a>
+            </div>
+          </div>
+        </div>
+        <!-- Project 3 -->
+        <div class="col-12 col-md-6 col-lg-4">
+          <div class="card project-card h-100 bg-dark border">
+            <img src="/assets/images/project3.jpg" class="card-img-top" alt="Screenshot of Project 3" loading="lazy" />
+            <div class="card-body">
+              <h3 class="h5">ARDS Microservice</h3>
+              <p class="text-white-50 small mb-3">
+                Legacy model containerization &amp; Java/Python bridge for healthcare batch pipelines.
+              </p>
+              <div class="d-flex flex-wrap gap-2 mb-3">
+                <span class="badge text-bg-secondary">Docker</span>
+                <span class="badge text-bg-secondary">Java</span>
+                <span class="badge text-bg-secondary">Python</span>
+              </div>
+              <a href="/projects#ards" class="stretched-link">Details</a>
+            </div>
+          </div>
+        </div>
+      </div><!-- /row -->
+    </div>
+  </section>
 
-  <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+  <!-- Experience & Education -->
+  <section class="py-5 bg-black bg-opacity-25">
+    <div class="container">
+      <div class="row g-4">
+        <div class="col-12 col-lg-6">
+          <h2 class="h4 mb-3">Experience</h2>
+          <ul class="list-group list-group-flush bg-transparent">
+            <li class="list-group-item bg-transparent text-light d-flex justify-content-between align-items-start">
+              <div class="me-3">
+                <div class="fw-semibold">Software Engineer · Intermountain Health</div>
+                <div class="text-white-50 small">Custom software, UI engineering, AI services, legacy systems</div>
+              </div>
+              <span class="text-white-50 small">2021–Present</span>
+            </li>
+            <li class="list-group-item bg-transparent text-light d-flex justify-content-between align-items-start">
+              <div class="me-3">
+                <div class="fw-semibold">Lead Surgical Tech (Endoscopy) · Intermountain Health</div>
+                <div class="text-white-50 small">Ops, systems, cross-functional leadership, surgical services</div>
+              </div>
+              <span class="text-white-50 small">2018–2021</span>
+            </li>
+            <li class="list-group-item bg-transparent text-light d-flex justify-content-between align-items-start">
+              <div class="me-3">
+                <div class="fw-semibold">Collections Officer · Discover Financial Services</div>
+              </div>
+              <span class="text-white-50 small">2016–2018</span>
+            </li>
+          </ul>
+        </div>
 
-  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
-    integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
-    crossorigin="anonymous"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
-    integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
-    crossorigin="anonymous"></script>
-  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
-    integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
-    crossorigin="anonymous"></script>
+        <div class="col-12 col-lg-6">
+          <h2 class="h4 mb-3">Education</h2>
+          <ul class="list-group list-group-flush bg-transparent">
+            <li class="list-group-item bg-transparent text-light d-flex justify-content-between align-items-start">
+              <div class="me-3">
+                <div class="fw-semibold">University of Utah</div>
+                <div class="text-white-50 small">Full-Stack Developer Certification</div>
+              </div>
+              <div class="me-3">
+                <div class="fw-semibold">Utah Valley University</div>
+                <div class="text-white-50 small">Emergency Medical Services</div>
+              </div>
+              <div class="me-3">
+                <div class="fw-semibold">WGU</div>
+                <div class="text-white-50 small">Software Engineering</div>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </div><!-- /row -->
+    </div>
+  </section>
+
+  <!-- Content Spotlight (video/podcast) -->
+  <section class="py-5">
+    <div class="container">
+      <div class="row g-4 align-items-center">
+        <div class="col-12 col-lg-6">
+          <h2 class="h4 mb-3">Content Spotlight</h2>
+          <p class="text-white-50">
+            Long-form conversations and practical breakdowns at the intersection of behavior, design, and engineering.
+          </p>
+          <div class="d-flex gap-2">
+            <a href="/videos" class="btn btn-primary"><span class="fa-solid fa-play me-2" aria-hidden="true"></span>
+              Watch</a>
+            <a href="#" class="btn btn-outline-light"><span class="fa-solid fa-podcast me-2" aria-hidden="true"></span>
+              Listen</a>
+          </div>
+        </div>
+        <div class="col-12 col-lg-6">
+          <div class="ratio ratio-16x9 border rounded-3">
+            <iframe src="https://www.youtube.com/embed/dQw4w9WgXcQ" title="Latest video"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+              allowfullscreen></iframe>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact CTA -->
+  <section class="py-5 hero">
+    <div class="container text-center">
+      <h2 class="h3 mb-3">Let’s build something useful</h2>
+      <p class="text-white-50 mb-4">Consulting, collaborations, or just swapping ideas—drop me a line.</p>
+      <a href="/contact" class="btn btn-light"><span class="fa-regular fa-envelope me-2"
+          aria-hidden="true"></span>Contact</a>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="border-top">
+    <div class="container">
+      <div class="d-flex flex-column flex-lg-row align-items-center justify-content-between py-4 gap-3">
+        <p class="mb-0 text-muted small">© <span id="year"></span> Matt Sullivan</p>
+        <ul class="nav">
+          <li class="nav-item"><a href="/home" class="nav-link px-2 text-muted">Home</a></li>
+          <li class="nav-item"><a href="/projects" class="nav-link px-2 text-muted">Projects</a></li>
+          <li class="nav-item"><a href="/videos" class="nav-link px-2 text-muted">Videos</a></li>
+        </ul>
+      </div>
+    </div>
+  </footer>
+
+<!-- Bootstrap 5 JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+          integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+          crossorigin="anonymous"></script>
+
+  <script>
+    document.getElementById('year')?.textContent = new Date().getFullYear();
+    const path = location.pathname.replace(/\/+$/, '');
+    document.querySelectorAll('.navbar .nav-link').forEach(a => {
+      const href = a.getAttribute('href');
+      if (href && href !== '/' && path.startsWith(href)) {
+        a.classList.add('active'); a.setAttribute('aria-current', 'page');
+      }
+    });
+  </script>
 </body>
 
 </html>

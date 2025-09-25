@@ -1,155 +1,122 @@
-/* body {
-    margin: 0;
-    padding: 0;
-    background: linear-gradient(0deg, rgba(0, 0, 0, 0.501), rgba(0, 0, 0, 0.41)), url(../../assets/images/mountains.jpg);
-    background-size: cover;
-    background-attachment: fixed;
-    background-repeat: no-repeat;
-} */
+/* Example background (commented out)
+body {
+  margin: 0;
+  padding: 0;
+  background: linear-gradient(0deg, rgba(0, 0, 0, 0.501), rgba(0, 0, 0, 0.41)), url(../../assets/images/mountains.jpg);
+  background-size: cover;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+}
+*/
 
+/* ✅ Correct FA selector (was `fa-brands` without the dot) */
+.fa-brands,
+.fab {
+  color: #ffffff;
+  /* Use font-size instead of width/height to avoid clipping pseudo elements */
+  font-size: 1.25rem;
+  line-height: 1;
+}
 
+/* Optional: unify icon sizing for the “.icon” wrapper you use */
+.icon {
+  font-size: 1.6rem;
+  line-height: 1;
+}
+
+/* Navbar */
 .navbar {
-    padding: 1%;
+  padding: 1%;
 }
 
+/* Legacy styles you had — keep as needed */
 .section-a {
-
-    margin: 0;
-    background: linear-gradient(0deg, rgba(0, 0, 0, 0.501), rgba(0, 0, 0, 0.41)), url(../assets/images/zion.JPG);
-    content-visibility: auto;
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-}
-
-.section-b {
+  margin: 0;
+  background: linear-gradient(0deg, rgba(0, 0, 0, 0.501), rgba(0, 0, 0, 0.41)), url(../assets/images/zion.JPG);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
 }
 
 .jumbotron {
-
-    margin: 0;
-    background-color: transparent;
-    display: flex;
-    justify-content: center;
+  margin: 0;
+  background-color: transparent;
+  display: flex;
+  justify-content: center;
 }
 
-.profilcePicContainer {
-    margin-top: 2rem;
-    text-align: center;
-    /* border-radius: 10px; */
+.profilcePicContainer { /* (typo left as-is if referenced in HTML) */
+  margin-top: 2rem;
+  text-align: center;
 }
 
 .profilePic {
-
-    height: 20rem;
-    border-radius: 50%;
-    border-style: solid 1px white;
+  height: 20rem;
+  border-radius: 50%;
+  border: 1px solid white;
 }
 
 .profileDescList {
-    border-radius: 5rem;
-    display: flex;
-    justify-content: space-evenly;
+  border-radius: 5rem;
+  display: flex;
+  justify-content: space-evenly;
 }
 
-.descItem {
-    /* margin-top: 1rem; */
-    margin-right: 1rem;
-}
+.descItem { margin-right: 1rem; }
 
-.aboutContainer {
-    width: 50%;
-}
-.ab_Title{
-    margin-top: 2rem;
-}
+.aboutContainer { width: 50%; }
+.ab_Title { margin-top: 2rem; }
 
 .short_about {
-    /* border-radius: 3rem; */
-    padding: 2rem;
-    display: flex;
-    justify-content: space-evenly;
+  padding: 2rem;
+  display: flex;
+  justify-content: space-evenly;
 }
 
-.aboutMeShort {
-    font-size: 20px;
-}
+.aboutMeShort { font-size: 20px; }
 
 .skills-container {
-    margin-top: 2rem;
-    display: flex;
-    justify-content: space-around;
+  margin-top: 2rem;
+  display: flex;
+  justify-content: space-around;
 }
-
 
 table {
-    font-family: arial, sans-serif;
-    border-collapse: collapse;
-    width: 100%;
+  font-family: arial, sans-serif;
+  border-collapse: collapse;
+  width: 100%;
 }
 
-td,
-th {
-    border: 1px solid #dddddd;
-
-    text-align: left;
-    padding: 8px;
+td, th {
+  border: 1px solid #dddddd;
+  text-align: left;
+  padding: 8px;
 }
 
-tr:nth-child(even) {
-    background-color: #dddddd;
-}
+tr:nth-child(even) { background-color: #dddddd; }
 
-
-/* mobile style */
-
+/* Mobile */
 @media screen and (max-width: 1448px) {
-  
-    .quoteText {
-        font-style: italic;
-        font-size: 2rem;
-    }
+  .quoteText { font-style: italic; font-size: 2rem; }
+  .section-b { padding: 0; }
+  .profilcePicContainer { text-align: center; }
 
-    .section-b {
-        padding: 0;
-    }
+  .profilePic {
+    height: 12rem;
+    border-radius: 50%;
+    border: 1px solid white;
+  }
 
-    .profilcePicContainer {
-        text-align: center;
-    }
+  .aboutContainer { width: 100%; }
+  .ab_Title { margin-top: 2rem; font-size: 2rem; }
 
-    .profilePic {
-        height: 12rem;
-        border-radius: 50%;
-        border-style: solid 1px white;
-    }
+  .short_about {
+    padding: 0;
+    display: inline-block;
+    border-radius: 0;
+  }
 
-    .aboutContainer {
-        width: 100%;
-    }
+  .aboutMeShort { font-size: 16px; }
 
-    .ab_Title {
-        margin-top: 2rem;
-        font-size: 2rem;
-    }
-
-    .short_about {
-        padding: 0;
-        display: inline-block;
-
-    }
-
-    .aboutMeShort {
-        font-size: 16px;
-    }
-
-    .short_about {
-        border-radius: 0;
-
-        padding: 1rem;
-    }
-
-
-
-
+  .short_about { padding: 1rem; }
 }

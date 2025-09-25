@@ -1,68 +1,121 @@
 <!doctype html>
 <html lang="en">
-
 <head>
-  <title>Welcome</title>
-  <!-- Required meta tags -->
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta charset="utf-8" />
+  <title>Matt Sullivan — Software Engineer, UI/UX Designer, Podcast Host</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="Portfolio of Matt Sullivan — Software Engineer, UI/UX Designer, and Podcast Host. Explore projects, videos, and more." />
 
-  <!-- Bootstrap CSS -->
-  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
-    integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-  <link rel="stylesheet" type="text/css" href="./css/landing.css">
+  <!-- Open Graph -->
+  <meta property="og:title" content="Matt Sullivan — Software Engineer" />
+  <meta property="og:description" content="Projects, writing, and videos by Matt Sullivan." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://your-domain.example/" />
+  <meta property="og:image" content="https://your-domain.example/assets/images/Capture.PNG" />
+
+  <link rel="icon" href="/assets/favicon.ico" />
+
+  <!-- Bootstrap 5 CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous"/>
+
+  <!-- Font Awesome (icons for command palette) -->
+  <script src="https://kit.fontawesome.com/adb19d7eeb.js" crossorigin="anonymous"></script>
+
+  <!-- Your CSS -->
+  <link rel="stylesheet" href="./css/landing.css" />
 </head>
 
 <body>
+  <!-- Full-page interactive background -->
+  <canvas id="bg-arcade" aria-hidden="true"></canvas>
+  <div class="bg-overlay" aria-hidden="true"></div>
 
-  <nav class="navbar navbar-expand-sm navbar-dark sticky-top bg-dark">
+  <!-- Everything else sits above the overlay -->
+  <div class="page-content">
+    <!-- Header -->
+    <header>
+      <nav class="navbar navbar-expand-md navbar-dark sticky-top" aria-label="Primary">
+        <div class="container">
+          <a class="navbar-brand fw-semibold" href="/">MS</a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNav"
+                  aria-controls="mainNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div id="mainNav" class="collapse navbar-collapse">
+            <ul class="navbar-nav ms-auto align-items-center">
+              <li class="nav-item"><a class="nav-link" href="/home">Home</a></li>
+              <li class="nav-item"><a class="nav-link" href="/about" aria-current="page">About</a></li>
+              <li class="nav-item"><a class="nav-link" href="/videos">Videos</a></li>
+              <li class="nav-item ms-2">
+                <button id="openPalette" class="btn btn-sm btn-outline-light" type="button" aria-label="Open quick navigation">
+                  Quick Open <span class="kbd ms-1">/</span>
+                </button>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+    </header>
 
-    <a class="navbar-brand" href="/">MS</a>
-    <button class="navbar-toggler navbar-toggler-icon d-lg" type="button" data-toggle="collapse"
-      data-target="#collapsibleNavId" aria-controls="collapsibleNavId" aria-expanded="false"
-      aria-label="Toggle navigation"></button>
-    <div class="collapse navbar-collapse" id="collapsibleNavId">
-      <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
-        <li class="nav-item ">
-          <a class="nav-link" href="/home">Home</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="/about">About<span class="sr-only">(current)</span></a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="/projects">Projects</span></a>
-        </li>
-        <li class="nav-item ">
-          <a class="nav-link" href="/videos">Videos</span></a>
-        </li>
-      </ul>
+    <!-- One cohesive hero -->
+    <main>
+      <section class="hero" id="hero">
+        <div class="container">
+          <div class="hero-card mx-auto">
+            <img class="profilePic" src="/assets/images/Capture.PNG" alt="Portrait of Matt Sullivan" loading="lazy" />
+            <h1 class="display-5 fw-bold mt-3 mb-2">Matt Sullivan</h1>
+            <p class="lead mb-1 text-white-50">Software Engineer</p>
+            <p class="lead mb-1 text-white-50">UI/UX Designer</p>
+            <p class="lead mb-3 text-white-50">Game Developer</p>
+            <div class="d-flex justify-content-center gap-2 flex-wrap">
+              <a class="btn btn-primary px-4" href="/about">About Me</a>
+              <a class="btn btn-outline-light px-3" href="/contact">Contact</a>
+            </div>
+            <div class="mt-3 text-white-50 small">
+              Background is interactive — click dots to score. Tip: press <span class="kbd">/</span> to jump anywhere.
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- Background game HUD -->
+    <div class="hud" role="status" aria-live="polite">
+      <span class="pill">Score: <span id="bgScore">0</span></span>
+      <span class="pill">High: <span id="bgHigh">0</span></span>
+      <button id="bgToggle" class="btn btn-sm btn-outline-light" type="button">Pause</button>
     </div>
-  </nav>
-  <div class="jumbotron jumbotron-fluid text-white text-center">
-    <div class="jumbo-info container">
-      <img class="profilePic" src="../assets/images/Capture.PNG" alt="" srcset="">
-      <h1 class="mt-3">Matt Sullivan</h1>
-      <div class="flavorText container mt-2">
-        <p>Software Engineer</p>
-        <p>UI/UX Designer</p>
-        <p>Podcast Host</p>
+
+    <!-- Command Palette -->
+    <div class="cmdk" id="cmdk" role="dialog" aria-modal="true" aria-labelledby="cmdkLabel" style="display:none">
+      <div class="cmdk-panel">
+        <input id="cmdkInput" class="cmdk-input" placeholder="Type to search… (e.g., 'projects')" aria-label="Quick navigation" />
+        <div class="cmdk-list" id="cmdkList" role="listbox">
+          <div class="cmdk-item" data-href="/about" role="option" tabindex="0"><i class="fa-regular fa-id-badge me-2"></i>About</div>
+          <div class="cmdk-item" data-href="/projects" role="option" tabindex="0"><i class="fa-solid fa-code me-2"></i>Projects</div>
+          <div class="cmdk-item" data-href="/videos" role="option" tabindex="0"><i class="fa-solid fa-video me-2"></i>Videos</div>
+          <div class="cmdk-item" data-href="/contact" role="option" tabindex="0"><i class="fa-regular fa-envelope me-2"></i>Contact</div>
+          <div class="cmdk-item" data-href="/home" role="option" tabindex="0"><i class="fa-solid fa-house me-2"></i>Home</div>
+        </div>
       </div>
-      <a class="text-white btn-primary btn" href="/about">About Me</a>
-
     </div>
+
+    <!-- Footer -->
+    <footer class="bg-dark text-white-50 py-4">
+      <div class="container text-center small">
+        © <span id="year"></span> Matt Sullivan · All rights reserved
+      </div>
+    </footer>
   </div>
 
-  <!-- Optional JavaScript -->
-  <!-- jQuery first, then Popper.js, then Bootstrap JS -->
-  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
-    integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
-    crossorigin="anonymous"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
-    integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
-    crossorigin="anonymous"></script>
-  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
-    integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
-    crossorigin="anonymous"></script>
-</body>
+  <!-- Bootstrap JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+          integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+          crossorigin="anonymous"></script>
 
+  <!-- Your JS (defer so DOM exists when they run) -->
+  <script src="./javascript/arcade.js" defer></script>
+  <script src="./javascript/ui.js" defer></script>
+</body>
 </html>
